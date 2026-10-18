@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #EEAA18;
+  --color-brand-dark: #111111;
+  --color-brand-surface: #171717;
+  --color-brand-border: #42424280;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #111111;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+nextjs-portal {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111111;
+  color: #e0e0e0;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.grain-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 300%;
+  height: 300%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  background-repeat: repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+  animation: animateGrain 8s steps(10) infinite;
+}
+
+@keyframes animateGrain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  20% {
+    transform: translate(-15%, -20%);
+  }
+
+  30% {
+    transform: translate(-5%, -10%);
+  }
+
+  40% {
+    transform: translate(-15%, -20%);
+  }
+
+  50% {
+    transform: translate(-5%, -10%);
+  }
+
+  60% {
+    transform: translate(-15%, -20%);
+  }
+
+  70% {
+    transform: translate(-5%, -10%);
+  }
+
+  80% {
+    transform: translate(-15%, -20%);
+  }
+
+  90% {
+    transform: translate(-5%, -10%);
+  }
+
+  100% {
+    transform: translate(-15%, -20%);
+  }
+}
+
+::selection {
+  background-color: #EEAA18;
+  color: #111111;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EEAA18;
+}
