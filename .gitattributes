@@ -1,1 +1,13 @@
+*.js -linguist-detectable
+*.jsx -linguist-detectable
+*.json -linguist-detectable
+*.css -linguist-detectable
+*.scss -linguist-detectable
+*.html -linguist-detectable
+*.md -linguist-documentation
+*.yaml -linguist-detectable
+*.yml -linguist-detectable
+
+
+*.ts linguist-detectable=true
 *.tsx linguist-detectable=true
