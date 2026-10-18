@@ -1,13 +1,26 @@
+# Exclude everything by default from repository language statistics
+* -linguist-detectable
+*/* -linguist-detectable
+**/* -linguist-detectable
+
+# Explicitly exclude JavaScript, styling, configs, markup, and docs
 *.js -linguist-detectable
 *.jsx -linguist-detectable
-*.json -linguist-detectable
+*.mjs -linguist-detectable
+*.cjs -linguist-detectable
 *.css -linguist-detectable
 *.scss -linguist-detectable
+*.sass -linguist-detectable
+*.less -linguist-detectable
 *.html -linguist-detectable
-*.md -linguist-documentation
+*.json -linguist-detectable
 *.yaml -linguist-detectable
 *.yml -linguist-detectable
+*.md -linguist-detectable -linguist-documentation
+*.txt -linguist-detectable
 
-
+# Only include TypeScript and TSX in language statistics
 *.ts linguist-detectable=true
 *.tsx linguist-detectable=true
+**/*.ts linguist-detectable=true
+**/*.tsx linguist-detectable=true
